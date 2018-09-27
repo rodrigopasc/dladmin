@@ -13,6 +13,10 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore application configuration
+/config/database.yml
+/config/config.yml
+
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
