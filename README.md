@@ -1,6 +1,6 @@
 # README
 Painel administrativo para o evento Descida da Ladeira da FATEC Arthur de Azevedo. (Em desenvolvimento)
-
+<br><br>
 ## Instalação
 1. Clonar o repositório.
 2. Abrir o diretório clonado.
