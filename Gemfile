@@ -31,6 +31,8 @@ gem 'inherited_resources'
 gem 'bootstrap_sb_admin_base_v2'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
+# Convert HTML to Slim templates.
+gem 'html2slim'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
