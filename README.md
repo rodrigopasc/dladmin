@@ -1,24 +1,38 @@
 # README
+Painel administrativo para o evento Descida da Ladeira da FATEC Arthur de Azevedo.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Instalação
+1. Clonar o repositório.
+2. Abrir o diretório clonado.
+```sh
+$ cd dladmin
+```
+3. Instalar as dependências.
+```sh
+$ bundle install
+```
+4. Alterar o arquivo `config/database.yml` com sua conexão do Postgres.
+5. Criar a base de dados.
+```sh
+$ rails db:create
+```
+6. Executar as migrations.
+```sh
+$ rails db:migrate
+```
+7. Executar a aplicação.
+```sh
+$ rails s
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Commit Pattern
+```
+⭐️ Feature
+🐛 Bugfix
+📄 Documentation
+🎨 Style
+🛠 Refactor
+🚀 Performance
+✔️ Test
+🌎 Chore
+```
