@@ -1,5 +1,5 @@
 # README
-Painel administrativo para o evento Descida da Ladeira da FATEC Arthur de Azevedo.
+Painel administrativo para o evento Descida da Ladeira da FATEC Arthur de Azevedo. (Em desenvolvimento)
 
 ## Instalação
 1. Clonar o repositório.
@@ -25,7 +25,7 @@ $ rails db:migrate
 $ rails s
 ```
 
-### Commit Pattern
+## Padrão de Commit
 ```
 ⭐️ Feature
 🐛 Bugfix
