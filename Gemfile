@@ -31,6 +31,8 @@ gem 'inherited_resources'
 gem 'bootstrap_sb_admin_base_v2'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
+# Translations for Devise.
+gem 'devise-i18n'
 # Convert HTML to Slim templates.
 gem 'html2slim'
 
