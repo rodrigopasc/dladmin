@@ -1,0 +1,21 @@
+p#notice
+  = notice
+p
+  strong
+    | Name:
+  = @course.name
+p
+  strong
+    | Teacher:
+  = @course.teacher
+p
+  strong
+    | Teacher email:
+  = @course.teacher_email
+p
+  strong
+    | Observations:
+  = @course.observations
+= link_to 'Edit', edit_course_path(@course)
+|  | 
+= link_to 'Back', courses_path
