@@ -1,35 +1,41 @@
-p#notice
-  = notice
-h1
-  | Courses
-table
-  thead
-    tr
-      th
-        | Name
-      th
-        | Teacher
-      th
-        | Teacher email
-      th
-        | Observations
-      th[colspan="3"]
-  tbody
-    - @courses.each do |course|
-      tr
-        td
-          = course.name
-        td
-          = course.teacher
-        td
-          = course.teacher_email
-        td
-          = course.observations
-        td
-          = link_to 'Show', course
-        td
-          = link_to 'Edit', edit_course_path(course)
-        td
-          = link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }
-br
-= link_to 'New Course', new_course_path
+#page-wrapper
+  .container-fluid
+    .row
+      .col-lg-12
+        h1.page-header
+          | Categorias
+        - if notice
+          .alert.alert-success.alert-dismissable
+            button.close[type="button" data-dismiss="alert" aria-hidden="true"]
+              | ×
+            = notice
+        .row
+          .col-lg-6
+            .panel.panel-default
+              .panel-heading
+                |  Exibindo Categorias
+                = link_to new_course_path, class: "btn btn-success btn-circle pull-right" do
+                  i.fa.fa-plus
+              .panel-body
+                .table-responsive
+                  table.table.table-striped.table-bordered.table-hover
+                    thead
+                      tr
+                        th
+                          | #
+                        th
+                          | Descrição
+                        th
+                          | Ações
+                    tbody
+                      - @courses.each do |course|
+                        tr
+                          td
+                            = course.id
+                          td
+                            = course.name
+                          td
+                            = link_to edit_course_path(course.id), class: "btn btn-primary btn-circle" do
+                              i.fa.fa-edit
+                            button.btn.btn-danger.btn-circle[type="button" disabled]
+                              i.fa.fa-minus

@@ -8,8 +8,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'a149e633eeb3519a97e9edabbf58597d3bade4a1e8df5744a0f8fa26d2b9a077e61ad5d9ccdc9c75ebbbc4c933df91c15261ee65e29d9d2d193fb6f661e26e59'
-  
+  config.secret_key = 'a149e633eeb3519a97e9edabbf58597d3bade4a1e8df5744a0f8fa26d2b9a077e61ad5d9ccdc9c75ebbbc4c933df91c15261ee65e29d9d2d193fb6f661e26e59'
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -114,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '8401942531e06dc17c1319f57da22c76b94882b0e1f44c05c1d5738f56b540c3c4b9cf06f7005c0969865508215d88b30c576d4c37e47472b8060c710f4662ef'
+  config.pepper = '8401942531e06dc17c1319f57da22c76b94882b0e1f44c05c1d5738f56b540c3c4b9cf06f7005c0969865508215d88b30c576d4c37e47472b8060c710f4662ef'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -145,7 +145,7 @@ Devise.setup do |config|
   config.reconfirmable = true
 
   # Defines which key will be used when confirming an account
-  # config.confirmation_keys = [:email]
+  config.confirmation_keys = [:email]
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
@@ -173,7 +173,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = 30.minutes
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
@@ -193,7 +193,7 @@ Devise.setup do |config|
 
   # Number of authentication tries before locking an account if lock_strategy
   # is failed attempts.
-  # config.maximum_attempts = 20
+  config.maximum_attempts = 20
 
   # Time interval to unlock the account if :time is enabled as unlock_strategy.
   # config.unlock_in = 1.hour
@@ -204,7 +204,7 @@ Devise.setup do |config|
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
-  # config.reset_password_keys = [:email]
+  config.reset_password_keys = [:email]
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to

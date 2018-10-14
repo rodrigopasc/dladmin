@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+# jQuery Rails.
+gem 'jquery-rails'
 # Slim is a template language whose goal is to reduce the syntax to the essential parts without becoming cryptic.
 gem 'slim'
 # Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
