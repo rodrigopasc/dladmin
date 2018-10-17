@@ -1,41 +1,32 @@
-#page-wrapper
-  .container-fluid
-    .row
-      .col-lg-12
-        h1.page-header
-          | Categorias
-        - if notice
-          .alert.alert-success.alert-dismissable
-            button.close[type="button" data-dismiss="alert" aria-hidden="true"]
-              | ×
-            = notice
-        .row
-          .col-lg-6
-            .panel.panel-default
-              .panel-heading
-                |  Exibindo Categorias
-                = link_to new_course_path, class: "btn btn-success btn-circle pull-right" do
-                  i.fa.fa-plus
-              .panel-body
-                .table-responsive
-                  table.table.table-striped.table-bordered.table-hover
-                    thead
-                      tr
-                        th
-                          | #
-                        th
-                          | Descrição
-                        th
-                          | Ações
-                    tbody
-                      - @courses.each do |course|
-                        tr
-                          td
-                            = course.id
-                          td
-                            = course.name
-                          td
-                            = link_to edit_course_path(course.id), class: "btn btn-primary btn-circle" do
-                              i.fa.fa-edit
-                            button.btn.btn-danger.btn-circle[type="button" disabled]
-                              i.fa.fa-minus
+h1.page-header
+  | Matérias
+  / = @courses.model_name.human(count: 2)
+.panel.panel-default
+  .panel-heading
+    / = t('messages.listing', model: @courses.model_name.human(count: 2))
+    | Matérias
+    = link_to new_course_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do
+      i.fa.fa-plus
+  .panel-body
+    .table-responsive
+      table.table.table-striped.table-bordered.table-hover
+        thead
+          tr
+            th
+              | Matérias
+            th
+              | Descrição
+              / = @courses.model.human_attribute_name('description')
+            th
+        tbody
+          - @courses.each do |course|
+            tr
+              td
+                = course.id
+              td
+                = course.name
+              td[style="width: 150px"]
+                = link_to edit_course_path(course), class: "btn btn-primary btn-circle" do
+                  i.fa.fa-edit
+                button.btn.btn-danger.btn-circle[type="button" disabled="disabled"]
+                  i.fa.fa-minus

@@ -29,5 +29,11 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+---
 pt-BR:
-  hello: "Olá mundo"
+  labels:
+    identify_yourself: "Identifique-se"
+    email: "E-mail"
+    password: "Senha"
+    remember_me: "Lembrar-me"
+    enter: "Entrar"
