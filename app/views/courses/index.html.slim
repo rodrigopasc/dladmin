@@ -13,6 +13,8 @@ h1.page-header
             tr
               th
                 | Descrição
+              th
+                | Professor
               th[style="text-align: center;"]
                 | Ações
           tbody
@@ -20,6 +22,8 @@ h1.page-header
               tr
                 td
                   = course.name
+                td
+                  = course.teacher
                 td[style="width: 80px; text-align: center;"]
                   = link_to edit_course_path(course), class: "btn btn-primary btn-circle" do
                     i.fa.fa-edit
