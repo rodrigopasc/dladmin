@@ -22,10 +22,10 @@ nav.navbar.navbar-default.navbar-static-top[role="navigation" style="margin-bott
     .sidebar-nav.navbar-collapse
       ul#side-menu.nav
         li
+          = link_to events_path do
+            i.fa.fa-calendar.fa-fw
+            |  Eventos
+        li
           = link_to courses_path do
             i.fa.fa-book.fa-fw
             |  Matérias
-        / li
-          / = link_to backoffice_categories_path do
-            i.fa.fa-th-list.fa-fw
-            |  Categorias

@@ -46,3 +46,52 @@ pt-BR:
         teacher: "Professor"
         teacher_email: "E-mail do professor"
         observations: "Observações"
+      event:
+        name: "Evento"
+        teams_limit: "Membros por equipe"
+        deadline: "Prazo final de inscrição"
+        description: "Descrição"
+
+  # pt-BR
+
+  day: "dia"
+  days: "dias"
+  date:
+    input:
+      formats:
+        - :default
+        - :long
+        - :short
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d de %B"
+      long: "%d de %B de %Y"
+      calendar: "%B/%Y"
+      day_of_week: "%A"
+      month_year: "%m/%Y"
+      month: "%B"
+      year: "%Y"
+    day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
+    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+    month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+    order:
+      - :day
+      - :month
+      - :year
+  time:
+    input:
+      formats:
+        - :long
+        - :medium
+        - :short
+        - :default
+        - :time
+    formats:
+      default: "%H:%M"
+      short: "%d/%m/%Y %H:%M"
+      long: "%A, %d de %B de %Y, %H:%M"
+      data: "%d/%m/%Y"
+      month_year: "%m/%Y"
+    am: ''
+    pm: ''

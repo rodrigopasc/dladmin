@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :courses, except: :show
+  # Devise
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  # Resources
+  resources :events, except: :show
+  resources :courses, except: :show
+
+  # Root
   root to: 'courses#index'
 end

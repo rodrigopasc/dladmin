@@ -1,0 +1,28 @@
+h1.page-header
+  | Eventos
+.panel.panel-default
+  .panel-heading
+    | Manutenção dos Eventos do Sistema
+    = link_to new_event_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do
+      i.fa.fa-plus
+  .panel-body
+    .card-body
+      .table-responsive
+        table#dataTable.table.table-striped.table-bordered.table-hover
+          thead
+            tr
+              th
+                | Descrição
+              th[style="text-align: center;"]
+                | Ações
+          tbody
+            - @events.each do |event|
+              tr
+                td
+                  = event.name
+                td[style="width: 80px; text-align: center;"]
+                  = link_to edit_event_path(event), class: "btn btn-primary btn-circle" do
+                    i.fa.fa-edit
+                  = link_to event_path(event), method: :delete do
+                    button.btn.btn-danger.btn-circle[type="button"]
+                      i.fa.fa-minus
