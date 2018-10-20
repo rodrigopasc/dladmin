@@ -12,10 +12,11 @@
                 = f.input :email, autofocus: true, input_html: { class: 'form-control', placeholder: "#{t('labels.email')}" }
               .form-group
                 = f.input :password, input_html: { class: 'form-control', placeholder: "#{t('labels.password')}" }
-              .checkbox
+              .checkbox[style="float: left;"]
                 label
                   = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
               = f.button :submit, "#{t('labels.enter')}", class: 'btn btn-lg btn-success btn-block'
+              br
               = render 'users/shared/links'
 - flash.each do |key, value|
   = javascript_tag "$.notify( { message: '#{value}'}, { type: 'danger', placement: { from: 'top', align: 'center' }});"

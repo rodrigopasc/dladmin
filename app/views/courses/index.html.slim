@@ -1,32 +1,28 @@
 h1.page-header
   | Matérias
-  / = @courses.model_name.human(count: 2)
 .panel.panel-default
   .panel-heading
-    / = t('messages.listing', model: @courses.model_name.human(count: 2))
-    | Matérias
+    | Manutenção das Matérias do Sistema
     = link_to new_course_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do
       i.fa.fa-plus
   .panel-body
-    .table-responsive
-      table.table.table-striped.table-bordered.table-hover
-        thead
-          tr
-            th
-              | Matérias
-            th
-              | Descrição
-              / = @courses.model.human_attribute_name('description')
-            th
-        tbody
-          - @courses.each do |course|
+    .card-body
+      .table-responsive
+        table#dataTable.table.table-striped.table-bordered.table-hover
+          thead
             tr
-              td
-                = course.id
-              td
-                = course.name
-              td[style="width: 150px"]
-                = link_to edit_course_path(course), class: "btn btn-primary btn-circle" do
-                  i.fa.fa-edit
-                button.btn.btn-danger.btn-circle[type="button" disabled="disabled"]
-                  i.fa.fa-minus
+              th
+                | Descrição
+              th[style="text-align: center;"]
+                | Ações
+          tbody
+            - @courses.each do |course|
+              tr
+                td
+                  = course.name
+                td[style="width: 80px; text-align: center;"]
+                  = link_to edit_course_path(course), class: "btn btn-primary btn-circle" do
+                    i.fa.fa-edit
+                  = link_to course_path(course), method: :delete do
+                    button.btn.btn-danger.btn-circle[type="button"]
+                      i.fa.fa-minus

@@ -37,3 +37,12 @@ pt-BR:
     password: "Senha"
     remember_me: "Lembrar-me"
     enter: "Entrar"
+  buttons:
+    save: "Salvar"
+  activerecord:
+    attributes:
+      course:
+        name: "Matéria"
+        teacher: "Professor"
+        teacher_email: "E-mail do professor"
+        observations: "Observações"
